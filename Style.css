@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color: rgb(121, 28, 28);
+}
+
+.circle {
+    margin: auto;
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.ring {
+    height: 10px;
+    width: 10px;
+
+    border-radius: 50%;
+    margin: 5px;
+    border-top: 2px solid red;
+    animation: rotate 3s ease-out infinite;
+
+}
+
+.ring2 {
+    position: absolute;
+    top: -10px;
+}
+
+.ring::after {
+    content: "";
+    font-size: 10px;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.roundrect {}
+
+.round {
+    margin: auto;
+    border: 2px solid rgb(82, 82, 233);
+    border-top: 4px solid green;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: transform 3s ease;
+
+
+}
+
+.round:hover {
+    transform: rotate(360deg);
+}
+
+.login {
+    margin: auto;
+    width: 400px;
+    margin-top: 50px;
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: white;
+    transition: transform 5s ease-in;
+    box-shadow: 5px 10px 1px white;
+}
+
+
+.login:hover {
+    transform: rotateY(180deg);
+
+}
+
+#textmy {
+    margin-top: 40px;
+    max-width: 300px;
+    animation: textmy 10s linear infinite;
+
+}
+
+@keyframes textmy {
+    from {
+        transform: translate(0);
+    }
+
+    to {
+        transform: translate(1400px);
+    }
+
+    /* 100%{
+        transform: translate(0px);
+    }
+     */
+}
+
+#irshad {
+    margin: 100px;
+    font-size: 40px;
+    font-style: italic;
+    color: white;
+    box-shadow: 10px 5px 4px;
+    border: 2px solid green;
+    animation: nameAdd 5s ease infinite;
+}
+
+@keyframes nameAdd {
+    0% {
+        border: 3px solid green;
+        transform: rotateY(180deg);
+    }
+
+    50% {
+        transform: rotateY(180deg);
+    }
+
+    100% {
+        border: 2px solid red;
+    }
+
+}
+
+.box {
+    margin: auto;
+    margin-top: 40px;
+    width: 400px;
+    height: 400px;
+    border: 5px solid;
+    animation: changecolr 2s linear infinite ;
+    border-image: linear-gradient(to right, grey 25%, yellow 25%, yellow 50%, red 50%, red 75%, teal 75%) 5;
+}
+
+@keyframes changecolr {
+    0%{
+        background-color: aqua;
+        border-image:   linear-gradient(to right, rgb(126, 12, 12) 25%, rgb(199, 0, 0) 25%, yellow 85%,red 50%, red 65%, teal 7%) 5;
+    }
+    2%{
+        background-color: rgb(13, 158, 0);
+
+        border-image:   linear-gradient(to right, rgb(0, 230, 142) 25%, rgb(7, 104, 44) 25%, yellow 58%,red 50%, red 45%, teal 5%) 5;
+    }
+    10%{
+        background-color: rgb(228, 0, 0);
+        border-image:   linear-gradient(to right, rgb(17, 16, 16) 25%, rgb(241, 154, 23) 25%, yellow 5%,red 50%, rgb(31, 21, 21) 75%, teal 175%) 5;
+    }
+    70%{
+        background-color: rgba(230, 7, 81, 0.836);
+        border-image:   linear-gradient(to right, rgb(13, 136, 119) 25%, rgb(7, 104, 44) 25%, yellow 50%,teal 75%red 50%, red 8%, teal 75%) 5;
+    }
+    10%{
+        border-image:   linear-gradient(to right, rgb(126, 12, 12) 25%, rgb(190, 67, 18) 25%, yellow 545%,red 50%, red 75%, teal 5%) 5;
+    }
+    70%{
+        border-image:   linear-gradient(to right, rgb(165, 192, 9) 25%, rgb(7, 104, 44) 25%, red 75%,yellow 50%,red 50%, red 75%, teal 75%) 5;
+    }
+    
+}
+
+
