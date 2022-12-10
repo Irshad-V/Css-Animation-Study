@@ -142,35 +142,93 @@ body {
     width: 400px;
     height: 400px;
     border: 5px solid;
-    animation: changecolr 2s linear infinite ;
+    animation: changecolr 2s linear infinite;
     border-image: linear-gradient(to right, grey 25%, yellow 25%, yellow 50%, red 50%, red 75%, teal 75%) 5;
 }
 
 @keyframes changecolr {
-    0%{
+    0% {
         background-color: aqua;
-        border-image:   linear-gradient(to right, rgb(126, 12, 12) 25%, rgb(199, 0, 0) 25%, yellow 85%,red 50%, red 65%, teal 7%) 5;
+        border-image: linear-gradient(to right, rgb(126, 12, 12) 25%, rgb(199, 0, 0) 25%, yellow 85%, red 50%, red 65%, teal 7%) 5;
     }
-    2%{
+
+    2% {
         background-color: rgb(13, 158, 0);
 
-        border-image:   linear-gradient(to right, rgb(0, 230, 142) 25%, rgb(7, 104, 44) 25%, yellow 58%,red 50%, red 45%, teal 5%) 5;
+        border-image: linear-gradient(to right, rgb(0, 230, 142) 25%, rgb(7, 104, 44) 25%, yellow 58%, red 50%, red 45%, teal 5%) 5;
     }
-    10%{
+
+    10% {
         background-color: rgb(228, 0, 0);
-        border-image:   linear-gradient(to right, rgb(17, 16, 16) 25%, rgb(241, 154, 23) 25%, yellow 5%,red 50%, rgb(31, 21, 21) 75%, teal 175%) 5;
+        border-image: linear-gradient(to right, rgb(17, 16, 16) 25%, rgb(241, 154, 23) 25%, yellow 5%, red 50%, rgb(31, 21, 21) 75%, teal 175%) 5;
     }
-    70%{
+
+    70% {
         background-color: rgba(230, 7, 81, 0.836);
-        border-image:   linear-gradient(to right, rgb(13, 136, 119) 25%, rgb(7, 104, 44) 25%, yellow 50%,teal 75%red 50%, red 8%, teal 75%) 5;
+        border-image: linear-gradient(to right, rgb(13, 136, 119) 25%, rgb(7, 104, 44) 25%, yellow 50%, teal 75%red 50%, red 8%, teal 75%) 5;
     }
-    10%{
-        border-image:   linear-gradient(to right, rgb(126, 12, 12) 25%, rgb(190, 67, 18) 25%, yellow 545%,red 50%, red 75%, teal 5%) 5;
+
+    10% {
+        border-image: linear-gradient(to right, rgb(126, 12, 12) 25%, rgb(190, 67, 18) 25%, yellow 545%, red 50%, red 75%, teal 5%) 5;
     }
-    70%{
-        border-image:   linear-gradient(to right, rgb(165, 192, 9) 25%, rgb(7, 104, 44) 25%, red 75%,yellow 50%,red 50%, red 75%, teal 75%) 5;
+
+    70% {
+        border-image: linear-gradient(to right, rgb(165, 192, 9) 25%, rgb(7, 104, 44) 25%, red 75%, yellow 50%, red 50%, red 75%, teal 75%) 5;
     }
-    
+
 }
 
+.doteLoad {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    margin-top: 50px;
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
 
+.dote {
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 13px;
+    height: 13px;
+    margin: 2px;
+   
+    animation:loadingBall 3s linear infinite ;
+}
+.dot1{
+    animation-delay: 1s;
+    
+}
+.dot2{
+    
+    animation-delay: 3s;
+}
+.dot3{
+    
+    animation-delay: 2s;
+}
+
+@keyframes loadingBall {
+    0% {
+        transform: translatey(0);
+    }
+    25% {
+        transform: translatey(-20px);
+    }
+    50%{
+        transform: translatey(-40px);
+    }
+    75%{
+        transform: translatey(-20px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+    
+
+
+}
